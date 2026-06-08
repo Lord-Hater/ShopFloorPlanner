@@ -44,8 +44,8 @@ struct AddPartSheet: View {
                         blankWeight: blankWeight,
                         finishedWeight: finishedWeight
                     )
-                    store.selectedPart = part
-                    store.sidebarTab = .parts
+                    store.workshop.parts.append(part)
+                    store.selectPart(part)
                     dismiss()
                 }
                 .buttonStyle(.borderedProminent)

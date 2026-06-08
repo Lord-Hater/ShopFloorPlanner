@@ -4,7 +4,7 @@ struct ReportView: View {
     @EnvironmentObject var store: AppStore
 
     var body: some View {
-        if let part = store.selectedPart {
+        if let part = store.selectedPart as Part? {
             ManufacturingReportView(part: part)
         } else {
             ContentUnavailableView(

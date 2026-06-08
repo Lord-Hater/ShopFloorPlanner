@@ -9,6 +9,7 @@ class Workshop: ObservableObject, Identifiable, Codable {
     @Published var height: Double
     @Published var machines: [Machine] = []
     @Published var zones: [WorkshopZone] = []
+    @Published var parts: [Part] = []
 
     init(name: String, width: Double, height: Double) {
         self.id = UUID()
@@ -21,9 +22,13 @@ class Workshop: ObservableObject, Identifiable, Codable {
         machines.first { $0.id == id }
     }
 
+    func part(by id: UUID) -> Part? {
+        parts.first { $0.id == id }
+    }
+
     // MARK: - Codable
     enum CodingKeys: CodingKey {
-        case id, name, width, height, machines, zones
+        case id, name, width, height, machines, zones, parts
     }
 
     required init(from decoder: Decoder) throws {
@@ -34,6 +39,7 @@ class Workshop: ObservableObject, Identifiable, Codable {
         height   = try c.decode(Double.self,  forKey: .height)
         machines = try c.decode([Machine].self, forKey: .machines)
         zones    = try c.decode([WorkshopZone].self, forKey: .zones)
+        parts    = try c.decode([Part].self,  forKey: .parts)
     }
 
     func encode(to encoder: Encoder) throws {
@@ -44,5 +50,6 @@ class Workshop: ObservableObject, Identifiable, Codable {
         try c.encode(height,   forKey: .height)
         try c.encode(machines, forKey: .machines)
         try c.encode(zones,    forKey: .zones)
+        try c.encode(parts,    forKey: .parts)
     }
 }
