@@ -18,12 +18,15 @@ targets:
       - path: Sources/ShopFloorPlanner
         excludes:
           - Resources
+      - path: ShopFloorPlanner/Assets.xcassets
+        type: folder
     settings:
       PRODUCT_BUNDLE_IDENTIFIER: com.lordhater.shopfloorplanner.app
       PRODUCT_NAME: ShopFloorPlanner
       INFOPLIST_FILE: ShopFloorPlanner/Info.plist
       CODE_SIGN_STYLE: Automatic
       SWIFT_VERSION: "6.0"
+      ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
     info:
       path: ShopFloorPlanner/Info.plist
       properties:

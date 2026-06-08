@@ -26,6 +26,7 @@
 		8F76A4A9DE30F82C1F0509BB /* ShopFloorPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C1AE19469B5B695A225938 /* ShopFloorPlannerApp.swift */; };
 		A8A67F795C041A2AB59B5040 /* GanttBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFE2BC09B163519F3FBD8F1 /* GanttBuilder.swift */; };
 		AAB72548E1BC6A8B51BD0A25 /* RouteOptimizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B40034652CE87CE8580EA5B /* RouteOptimizer.swift */; };
+		AABB310377A6623791A64727 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 556D3B0ADD7DB0458D8C99C5 /* Assets.xcassets */; };
 		AF23ABA2D32475452A2CEC59 /* MachineDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736E49D8567F566AF8387703 /* MachineDetailView.swift */; };
 		AFC6EBD35D0FD6FB678E8866 /* ShopFloorDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE639E5AB5E16D74AB0AF042 /* ShopFloorDocument.swift */; };
 		D3117F3D75B444121853FBC5 /* Part.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2096A0415E07ACEC12B334 /* Part.swift */; };
@@ -53,6 +54,7 @@
 		02C1AE19469B5B695A225938 /* ShopFloorPlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopFloorPlannerApp.swift; sourceTree = "<group>"; };
 		0C2096A0415E07ACEC12B334 /* Part.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Part.swift; sourceTree = "<group>"; };
 		53D4AED0E8A894BFB0A72C9A /* OperationsEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationsEditorView.swift; sourceTree = "<group>"; };
+		556D3B0ADD7DB0458D8C99C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Assets.xcassets; path = ShopFloorPlanner/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		55F4349C5E1B81DA2C527594 /* Machine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Machine.swift; sourceTree = "<group>"; };
 		596AB4DB14D3164929D3CAE6 /* CuttingParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuttingParameters.swift; sourceTree = "<group>"; };
 		5B40034652CE87CE8580EA5B /* RouteOptimizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteOptimizer.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		200B84BB8DE37136A7D60FF4 = {
 			isa = PBXGroup;
 			children = (
+				2E864B255D2EAD64AECF572D /* ShopFloorPlanner */,
 				8065F11C89EA4BF25BC3BF23 /* Sources */,
 				F4DD0EA8BD18778ED99E1245 /* Tests */,
 				70108ADC17D2964554720240 /* Products */,
@@ -121,6 +124,14 @@
 				9BE7C3365D2707D78245E48E /* Models */,
 				B857D285656A76139A742945 /* Services */,
 				8EA16C02640AD48560E5E6F8 /* Views */,
+			);
+			path = ShopFloorPlanner;
+			sourceTree = "<group>";
+		};
+		2E864B255D2EAD64AECF572D /* ShopFloorPlanner */ = {
+			isa = PBXGroup;
+			children = (
+				556D3B0ADD7DB0458D8C99C5 /* Assets.xcassets */,
 			);
 			path = ShopFloorPlanner;
 			sourceTree = "<group>";
@@ -251,6 +262,7 @@
 			buildConfigurationList = 8BE9DF8E9AB0A74FD2C64F12 /* Build configuration list for PBXNativeTarget "ShopFloorPlanner" */;
 			buildPhases = (
 				40B595582918E3D1EA0F7375 /* Sources */,
+				A262E65D77C4106D2EEBFE96 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -314,6 +326,17 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A262E65D77C4106D2EEBFE96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AABB310377A6623791A64727 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2AF3C63F781C2B93D04A6E3C /* Sources */ = {
