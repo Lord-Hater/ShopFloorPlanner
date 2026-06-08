@@ -4,8 +4,8 @@ struct ReportView: View {
     @EnvironmentObject var store: AppStore
 
     var body: some View {
-        if let part = store.selectedPart as Part? {
-            ManufacturingReportView(part: part)
+        if let part = store.selectedPart, let workshop = store.workshop {
+            ManufacturingReportView(part: part, workshop: workshop)
         } else {
             ContentUnavailableView(
                 "Выберите деталь",
@@ -18,10 +18,11 @@ struct ReportView: View {
 
 struct ManufacturingReportView: View {
     let part: Part
+    let workshop: Workshop
     @EnvironmentObject var store: AppStore
 
     private var result: ManufacturingTimeResult {
-        TimeCalculator.calculate(part: part, workshop: store.workshop)
+        TimeCalculator.calculate(part: part, workshop: workshop)
     }
 
     var body: some View {
@@ -113,10 +114,10 @@ struct ManufacturingReportView: View {
     }
 
     private var routeSection: some View {
-        let steps = RouteOptimizer.buildRoute(part: part, workshop: store.workshop)
+        let steps = RouteOptimizer.buildRoute(part: part, workshop: workshop)
         return GroupBox("Маршрут по цеху") {
             VStack(alignment: .leading, spacing: 6) {
-                ForEach(steps.indices, id: \.self) { i in
+                ForEach(Array(steps.indices), id: \.self) { i in
                     HStack {
                         Image(systemName: "arrow.right.circle.fill")
                             .foregroundStyle(.blue)

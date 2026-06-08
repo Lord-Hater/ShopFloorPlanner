@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct SidebarView: View {
+    @ObservedObject var workshop: Workshop
     @EnvironmentObject var store: AppStore
 
     var body: some View {
@@ -19,7 +20,7 @@ struct SidebarView: View {
                     .tag(AppStore.SidebarTab.reports)
             }
         }
-        .navigationTitle(store.workshop.name)
+        .navigationTitle(workshop.name)
         .listStyle(.sidebar)
     }
 }

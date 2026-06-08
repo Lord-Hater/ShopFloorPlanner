@@ -96,7 +96,7 @@ struct OperationsEditorView: View {
     }
 
     private func machineName(for op: Operation) -> String {
-        op.machineID.flatMap { store.workshop.machine(by: $0) }?.name ?? "—"
+        op.machineID.flatMap { store.workshop?.machine(by: $0) }?.name ?? "—"
     }
 
     private func formatTime(_ minutes: Double) -> String {

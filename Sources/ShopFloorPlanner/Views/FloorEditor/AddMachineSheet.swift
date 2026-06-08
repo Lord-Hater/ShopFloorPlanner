@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct AddMachineSheet: View {
+    @ObservedObject var workshop: Workshop
     @EnvironmentObject var store: AppStore
     @Environment(\.dismiss) var dismiss
 
@@ -32,13 +33,11 @@ struct AddMachineSheet: View {
                     let machine = Machine(
                         name: name.isEmpty ? selectedType.rawValue : name,
                         type: selectedType,
-                        position: CGPoint(
-                            x: store.workshop.width / 2,
-                            y: store.workshop.height / 2
-                        )
+                        position: CGPoint(x: workshop.width / 2, y: workshop.height / 2)
                     )
-                    store.workshop.machines.append(machine)
+                    workshop.machines.append(machine)
                     store.selectedMachineID = machine.id
+                    store.markDirty()
                     dismiss()
                 }
                 .buttonStyle(.borderedProminent)

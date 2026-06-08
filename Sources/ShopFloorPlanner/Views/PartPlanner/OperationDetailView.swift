@@ -6,7 +6,7 @@ struct OperationDetailView: View {
     @EnvironmentObject var store: AppStore
 
     private var compatibleMachines: [Machine] {
-        store.workshop.machines.filter { machine in
+        (store.workshop?.machines ?? []).filter { machine in
             machine.type.compatibleOperationType == operation.type
         }
     }
@@ -42,7 +42,7 @@ struct OperationDetailView: View {
                     }
 
                     if let machineID = operation.machineID,
-                       let machine = store.workshop.machine(by: machineID) {
+                       let machine = store.workshop?.machine(by: machineID) {
                         MachineInfoRow(machine: machine)
                     }
                 }
@@ -113,7 +113,7 @@ struct OperationDetailView: View {
                     if let override = operation.setupTimeOverride {
                         timeSummaryRow("Переналадка (вручную)", value: override)
                     } else if let machineID = operation.machineID,
-                              let machine = store.workshop.machine(by: machineID) {
+                              let machine = store.workshop?.machine(by: machineID) {
                         timeSummaryRow("Переналадка (со станка)", value: machine.setupTime)
                     }
                     Divider()

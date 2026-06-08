@@ -5,7 +5,7 @@ struct MachineDetailView: View {
 
     var body: some View {
         if let id = store.selectedMachineID,
-           let machine = store.workshop.machine(by: id) {
+           let machine = store.workshop?.machine(by: id) {
             MachinePropertiesView(machine: machine)
         } else {
             ContentUnavailableView(

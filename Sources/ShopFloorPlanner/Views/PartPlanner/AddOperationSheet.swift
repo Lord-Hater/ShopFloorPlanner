@@ -12,7 +12,7 @@ struct AddOperationSheet: View {
     @State private var auxiliaryTime = 1.0
 
     private var compatibleMachines: [Machine] {
-        store.workshop.machines.filter { $0.type.compatibleOperationType == type }
+        (store.workshop?.machines ?? []).filter { $0.type.compatibleOperationType == type }
     }
 
     var body: some View {
@@ -41,7 +41,7 @@ struct AddOperationSheet: View {
             }
             .disabled(compatibleMachines.isEmpty)
 
-            if compatibleMachines.isEmpty && !store.workshop.machines.isEmpty {
+            if compatibleMachines.isEmpty && !(store.workshop?.machines.isEmpty ?? true) {
                 Label("Нет совместимых станков для этого типа операции", systemImage: "exclamationmark.triangle")
                     .font(.caption)
                     .foregroundStyle(.orange)

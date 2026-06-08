@@ -1,16 +1,15 @@
 import SwiftUI
 
 struct PartPlannerView: View {
+    @ObservedObject var workshop: Workshop
     @EnvironmentObject var store: AppStore
     @State private var showAddPart = false
 
     var body: some View {
         HSplitView {
-            // Левая панель — список деталей
             partList
                 .frame(minWidth: 200, maxWidth: 280)
 
-            // Правая панель — операции выбранной детали
             if let part = store.selectedPart {
                 OperationsEditorView(part: part)
             } else {
@@ -22,7 +21,7 @@ struct PartPlannerView: View {
             }
         }
         .sheet(isPresented: $showAddPart) {
-            AddPartSheet()
+            AddPartSheet(workshop: workshop)
         }
         .navigationTitle("Маршрут детали")
     }
@@ -32,9 +31,7 @@ struct PartPlannerView: View {
             HStack {
                 Text("Детали").font(.headline)
                 Spacer()
-                Button {
-                    showAddPart = true
-                } label: {
+                Button { showAddPart = true } label: {
                     Image(systemName: "plus")
                 }
                 .buttonStyle(.plain)
@@ -44,15 +41,16 @@ struct PartPlannerView: View {
 
             Divider()
 
-            List(store.workshop.parts, selection: $store.selectedPartID) { part in
+            List(workshop.parts, selection: $store.selectedPartID) { part in
                 PartRowView(part: part)
                     .tag(part.id)
                     .contextMenu {
                         Button(role: .destructive) {
-                            store.workshop.parts.removeAll { $0.id == part.id }
+                            workshop.parts.removeAll { $0.id == part.id }
                             if store.selectedPartID == part.id {
-                                store.selectedPartID = store.workshop.parts.first?.id
+                                store.selectedPartID = workshop.parts.first?.id
                             }
+                            store.markDirty()
                         } label: {
                             Label("Удалить", systemImage: "trash")
                         }

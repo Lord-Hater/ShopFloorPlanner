@@ -1,19 +1,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var workshop: Workshop
     @EnvironmentObject var store: AppStore
 
     var body: some View {
         NavigationSplitView {
-            SidebarView()
+            SidebarView(workshop: workshop)
         } content: {
-            FloorEditorView()
+            FloorEditorView(workshop: workshop)
         } detail: {
             switch store.sidebarTab {
             case .machines:
                 MachineDetailView()
             case .parts:
-                PartPlannerView()
+                PartPlannerView(workshop: workshop)
             case .reports:
                 ReportView()
             }

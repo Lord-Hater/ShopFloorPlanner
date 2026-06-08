@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct AddPartSheet: View {
+    @ObservedObject var workshop: Workshop
     @EnvironmentObject var store: AppStore
     @Environment(\.dismiss) var dismiss
 
@@ -11,31 +12,24 @@ struct AddPartSheet: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text("Новая деталь")
-                .font(.title2.bold())
+            Text("Новая деталь").font(.title2.bold())
 
-            TextField("Название детали", text: $name)
-                .textFieldStyle(.roundedBorder)
-
-            TextField("Материал", text: $material)
-                .textFieldStyle(.roundedBorder)
+            TextField("Название детали", text: $name).textFieldStyle(.roundedBorder)
+            TextField("Материал", text: $material).textFieldStyle(.roundedBorder)
 
             HStack {
                 VStack(alignment: .leading) {
                     Text("Масса заготовки (кг)").font(.caption)
-                    TextField("", value: $blankWeight, format: .number)
-                        .textFieldStyle(.roundedBorder)
+                    TextField("", value: $blankWeight, format: .number).textFieldStyle(.roundedBorder)
                 }
                 VStack(alignment: .leading) {
                     Text("Масса детали (кг)").font(.caption)
-                    TextField("", value: $finishedWeight, format: .number)
-                        .textFieldStyle(.roundedBorder)
+                    TextField("", value: $finishedWeight, format: .number).textFieldStyle(.roundedBorder)
                 }
             }
 
             HStack {
-                Button("Отмена") { dismiss() }
-                    .keyboardShortcut(.escape)
+                Button("Отмена") { dismiss() }.keyboardShortcut(.escape)
                 Spacer()
                 Button("Создать") {
                     let part = Part(
@@ -44,8 +38,9 @@ struct AddPartSheet: View {
                         blankWeight: blankWeight,
                         finishedWeight: finishedWeight
                     )
-                    store.workshop.parts.append(part)
+                    workshop.parts.append(part)
                     store.selectPart(part)
+                    store.markDirty()
                     dismiss()
                 }
                 .buttonStyle(.borderedProminent)

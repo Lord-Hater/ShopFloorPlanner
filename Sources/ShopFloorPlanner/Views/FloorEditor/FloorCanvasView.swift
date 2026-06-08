@@ -1,28 +1,25 @@
 import SwiftUI
 
 struct FloorCanvasView: View {
+    @ObservedObject var workshop: Workshop
     @EnvironmentObject var store: AppStore
     let scale: CGFloat
 
     var body: some View {
         ZStack(alignment: .topLeading) {
-            // Фон — сетка цеха
-            GridBackground(scale: scale,
-                           width: store.workshop.width,
-                           height: store.workshop.height)
+            GridBackground(scale: scale, width: workshop.width, height: workshop.height)
 
-            // Зоны
-            ForEach(store.workshop.zones) { zone in
+            ForEach(workshop.zones) { zone in
                 ZoneView(zone: zone, scale: scale)
             }
 
-            // Станки
-            ForEach(store.workshop.machines) { machine in
+            ForEach(workshop.machines) { machine in
                 MachineView(machine: machine, scale: scale,
                             isSelected: store.selectedMachineID == machine.id)
                     .onTapGesture {
                         store.selectedMachineID = machine.id
                         store.sidebarTab = .machines
+                        store.markDirty()
                     }
                     .gesture(DragGesture()
                         .onChanged { value in
@@ -30,6 +27,7 @@ struct FloorCanvasView: View {
                                 x: value.location.x / scale,
                                 y: value.location.y / scale
                             )
+                            store.markDirty()
                         }
                     )
             }

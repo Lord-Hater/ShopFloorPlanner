@@ -1,20 +1,21 @@
 import SwiftUI
 
 struct FloorEditorView: View {
+    @ObservedObject var workshop: Workshop
     @EnvironmentObject var store: AppStore
-    @State private var scale: CGFloat = 20.0   // пикселей на метр
+    @State private var scale: CGFloat = 20.0
     @State private var showAddMachine = false
 
     var body: some View {
         VStack(spacing: 0) {
             toolbar
             Divider()
-            GeometryReader { geo in
+            GeometryReader { _ in
                 ScrollView([.horizontal, .vertical]) {
-                    FloorCanvasView(scale: scale)
+                    FloorCanvasView(workshop: workshop, scale: scale)
                         .frame(
-                            width:  CGFloat(store.workshop.width)  * scale,
-                            height: CGFloat(store.workshop.height) * scale
+                            width:  CGFloat(workshop.width)  * scale,
+                            height: CGFloat(workshop.height) * scale
                         )
                 }
                 .background(Color(nsColor: .controlBackgroundColor))
@@ -22,7 +23,7 @@ struct FloorEditorView: View {
         }
         .navigationTitle("Схема цеха")
         .sheet(isPresented: $showAddMachine) {
-            AddMachineSheet()
+            AddMachineSheet(workshop: workshop)
         }
     }
 
@@ -37,13 +38,9 @@ struct FloorEditorView: View {
 
             Spacer()
 
-            Text("Масштаб")
-                .foregroundStyle(.secondary)
-            Slider(value: $scale, in: 10...50, step: 5)
-                .frame(width: 120)
-            Text("\(Int(scale)) px/м")
-                .monospacedDigit()
-                .foregroundStyle(.secondary)
+            Text("Масштаб").foregroundStyle(.secondary)
+            Slider(value: $scale, in: 10...50, step: 5).frame(width: 120)
+            Text("\(Int(scale)) px/м").monospacedDigit().foregroundStyle(.secondary)
         }
         .padding(.horizontal, 12)
         .padding(.vertical, 8)
