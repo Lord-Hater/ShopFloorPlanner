@@ -33,12 +33,18 @@ struct MachinePropertiesView: View {
 
             Section("Размеры (м)") {
                 LabeledContent("Ширина") {
-                    TextField("", value: $machine.size.width, format: .number)
+                    TextField("", value: Binding(
+                        get: { Double(machine.size.width) },
+                        set: { machine.size.width = CGFloat($0) }
+                    ), format: .number)
                         .textFieldStyle(.roundedBorder)
                         .frame(width: 80)
                 }
                 LabeledContent("Глубина") {
-                    TextField("", value: $machine.size.height, format: .number)
+                    TextField("", value: Binding(
+                        get: { Double(machine.size.height) },
+                        set: { machine.size.height = CGFloat($0) }
+                    ), format: .number)
                         .textFieldStyle(.roundedBorder)
                         .frame(width: 80)
                 }
@@ -60,12 +66,18 @@ struct MachinePropertiesView: View {
 
             Section("Позиция на схеме (м)") {
                 LabeledContent("X") {
-                    TextField("", value: $machine.position.x, format: .number)
+                    TextField("", value: Binding(
+                        get: { Double(machine.position.x) },
+                        set: { machine.position.x = CGFloat($0) }
+                    ), format: .number)
                         .textFieldStyle(.roundedBorder)
                         .frame(width: 80)
                 }
                 LabeledContent("Y") {
-                    TextField("", value: $machine.position.y, format: .number)
+                    TextField("", value: Binding(
+                        get: { Double(machine.position.y) },
+                        set: { machine.position.y = CGFloat($0) }
+                    ), format: .number)
                         .textFieldStyle(.roundedBorder)
                         .frame(width: 80)
                 }

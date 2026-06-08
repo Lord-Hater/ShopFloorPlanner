@@ -47,13 +47,32 @@ struct OperationDetailView: View {
                     }
                 }
 
+                // Режимы резания (токарная / фрезерная / сверлильная / шлифовальная)
+                if operation.type.supportsCuttingParameters {
+                    Section("Режимы резания") {
+                        CuttingParametersView(
+                            container: $operation.cuttingParameters,
+                            operationType: operation.type
+                        )
+                    }
+                }
+
                 Section("Время (минуты)") {
-                    LabeledContent("Машинное время") {
-                        HStack {
-                            Slider(value: $operation.machineTime, in: 0.1...120, step: 0.5)
-                            TextField("", value: $operation.machineTime, format: .number.precision(.fractionLength(1)))
-                                .textFieldStyle(.roundedBorder)
-                                .frame(width: 64)
+                    // Машинное время — только ручной ввод если режимы не заданы
+                    if operation.cuttingParameters == nil {
+                        LabeledContent("Машинное время T₀") {
+                            HStack {
+                                Slider(value: $operation.machineTime, in: 0.1...120, step: 0.5)
+                                TextField("", value: $operation.machineTime, format: .number.precision(.fractionLength(1)))
+                                    .textFieldStyle(.roundedBorder)
+                                    .frame(width: 64)
+                            }
+                        }
+                    } else {
+                        LabeledContent("Машинное время T₀ (по формуле)") {
+                            Text(String(format: "%.3f мин", operation.effectiveMachineTime))
+                                .monospacedDigit()
+                                .foregroundStyle(Color.accentColor)
                         }
                     }
 

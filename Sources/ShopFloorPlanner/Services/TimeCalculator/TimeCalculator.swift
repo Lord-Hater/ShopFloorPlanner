@@ -50,13 +50,13 @@ struct TimeCalculator {
                 transportTime = 0
             }
 
-            let total = op.machineTime + op.auxiliaryTime + setupTime + transportTime
+            let total = op.effectiveMachineTime + op.auxiliaryTime + setupTime + transportTime
 
             operationResults.append(OperationTimeResult(
                 operation: op,
                 machineID: op.machineID,
                 machineName: machineName,
-                machineTime: op.machineTime,
+                machineTime: op.effectiveMachineTime,
                 auxiliaryTime: op.auxiliaryTime,
                 setupTime: setupTime,
                 transportTimeBefore: transportTime,
