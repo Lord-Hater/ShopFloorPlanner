@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2CE6614232D4A4189DBEB401 /* OperationsEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D4AED0E8A894BFB0A72C9A /* OperationsEditorView.swift */; };
+		2D3A8342AB5952683BB11AB8 /* FloorCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C051F57621B1BC5256772ECA /* FloorCanvasView.swift */; };
+		30B84B5955641C90B6688F52 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772A59D5D82D28F10C9B4BB7 /* ContentView.swift */; };
+		46E8827932DCB725129B0858 /* DocumentContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858720A83B4C1C72A809508A /* DocumentContentView.swift */; };
+		4C286619A992EDEBBD6B0D53 /* MachineTypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64711055F007CA11F4318BD7 /* MachineTypeExtensions.swift */; };
+		55503F105D54DACE827C8789 /* CuttingParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AB4DB14D3164929D3CAE6 /* CuttingParameters.swift */; };
+		594153A05DCD59C3085C6557 /* TimeCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E22320167BA0C369B589D79 /* TimeCalculatorTests.swift */; };
+		5C82A6E8C83585DD5CE47C56 /* TimeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E7CDF26D9860A853F7C69B /* TimeCalculator.swift */; };
+		67C045393BCF5BBF9AA7AF5D /* AddPartSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96794FF752730690B2ABD555 /* AddPartSheet.swift */; };
+		69F73F98BF11267624B951AD /* WorkshopZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27426474F21B5FAC476C698 /* WorkshopZone.swift */; };
+		6CED0014DBA9A1B88CC9F036 /* AddMachineSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EC2FDCF33EE3E9A16DF5F0 /* AddMachineSheet.swift */; };
+		6D25FD22EE4821D135B1AF8C /* OperationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E438B3915947FE0DDA2A8E2F /* OperationDetailView.swift */; };
+		7D54B88344CC6E8F8B9FF201 /* AppCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = B692608114EA3ECB1478276C /* AppCommands.swift */; };
+		7ED3594C27327679C1D8293E /* PartPlannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A088AE48945484EB8E74275E /* PartPlannerView.swift */; };
+		8595B156B9328786AF476916 /* AddOperationSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BF2F37E92F3BD644C5306D /* AddOperationSheet.swift */; };
+		8749180138ABEB36BFBC700F /* Workshop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8E1FD2F383FC4112C4DA79 /* Workshop.swift */; };
+		8F76A4A9DE30F82C1F0509BB /* ShopFloorPlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C1AE19469B5B695A225938 /* ShopFloorPlannerApp.swift */; };
+		A8A67F795C041A2AB59B5040 /* GanttBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFE2BC09B163519F3FBD8F1 /* GanttBuilder.swift */; };
+		AAB72548E1BC6A8B51BD0A25 /* RouteOptimizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B40034652CE87CE8580EA5B /* RouteOptimizer.swift */; };
+		AF23ABA2D32475452A2CEC59 /* MachineDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736E49D8567F566AF8387703 /* MachineDetailView.swift */; };
+		AFC6EBD35D0FD6FB678E8866 /* ShopFloorDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE639E5AB5E16D74AB0AF042 /* ShopFloorDocument.swift */; };
+		D3117F3D75B444121853FBC5 /* Part.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2096A0415E07ACEC12B334 /* Part.swift */; };
+		D3D0FFD9F7B03729F44ED9C7 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C791F1C08D446A7347A10BB /* ReportView.swift */; };
+		DD97915D774F2A69A6A3369E /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4546D33311FC535120D889A /* AppStore.swift */; };
+		EE932F7DF359114939C4E9CF /* Machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F4349C5E1B81DA2C527594 /* Machine.swift */; };
+		EFCEA4FF5E2379442943FA08 /* GanttView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCCABAEE10BF5EF3B5058F2 /* GanttView.swift */; };
+		F2FB53925F685FD5EE7B836B /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975D35F678E0BB5EF02E065A /* SidebarView.swift */; };
+		F9089B5A724C255C875CEBE3 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD501E6615EEACC1BA8DE538 /* Operation.swift */; };
+		FA8B6C29662B14BA2DFE1060 /* FloorEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A5FA557ADF6E9C9D1DCB87 /* FloorEditorView.swift */; };
+		FDCB276A48AD2FEEF4D10AFE /* CuttingParametersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84E8A8BB522EF1A9D63E315 /* CuttingParametersView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0AA1EB8B3B824EABD2FE8162 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F549172937252C2BD62AACA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7F2B8F4E09204AED10B22A0;
+			remoteInfo = ShopFloorPlanner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02C1AE19469B5B695A225938 /* ShopFloorPlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopFloorPlannerApp.swift; sourceTree = "<group>"; };
+		0C2096A0415E07ACEC12B334 /* Part.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Part.swift; sourceTree = "<group>"; };
+		53D4AED0E8A894BFB0A72C9A /* OperationsEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationsEditorView.swift; sourceTree = "<group>"; };
+		55F4349C5E1B81DA2C527594 /* Machine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Machine.swift; sourceTree = "<group>"; };
+		596AB4DB14D3164929D3CAE6 /* CuttingParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuttingParameters.swift; sourceTree = "<group>"; };
+		5B40034652CE87CE8580EA5B /* RouteOptimizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteOptimizer.swift; sourceTree = "<group>"; };
+		64711055F007CA11F4318BD7 /* MachineTypeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineTypeExtensions.swift; sourceTree = "<group>"; };
+		736E49D8567F566AF8387703 /* MachineDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDetailView.swift; sourceTree = "<group>"; };
+		772A59D5D82D28F10C9B4BB7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7DCCABAEE10BF5EF3B5058F2 /* GanttView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GanttView.swift; sourceTree = "<group>"; };
+		858720A83B4C1C72A809508A /* DocumentContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentContentView.swift; sourceTree = "<group>"; };
+		85A5FA557ADF6E9C9D1DCB87 /* FloorEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorEditorView.swift; sourceTree = "<group>"; };
+		8C791F1C08D446A7347A10BB /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
+		8DC2096E282F73EE1546239B /* ShopFloorPlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShopFloorPlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96794FF752730690B2ABD555 /* AddPartSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPartSheet.swift; sourceTree = "<group>"; };
+		975D35F678E0BB5EF02E065A /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		9A8E1FD2F383FC4112C4DA79 /* Workshop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workshop.swift; sourceTree = "<group>"; };
+		9E22320167BA0C369B589D79 /* TimeCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCalculatorTests.swift; sourceTree = "<group>"; };
+		9FFE2BC09B163519F3FBD8F1 /* GanttBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GanttBuilder.swift; sourceTree = "<group>"; };
+		A088AE48945484EB8E74275E /* PartPlannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartPlannerView.swift; sourceTree = "<group>"; };
+		AD501E6615EEACC1BA8DE538 /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		B692608114EA3ECB1478276C /* AppCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCommands.swift; sourceTree = "<group>"; };
+		C051F57621B1BC5256772ECA /* FloorCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorCanvasView.swift; sourceTree = "<group>"; };
+		C27426474F21B5FAC476C698 /* WorkshopZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopZone.swift; sourceTree = "<group>"; };
+		C4546D33311FC535120D889A /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
+		C84E8A8BB522EF1A9D63E315 /* CuttingParametersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuttingParametersView.swift; sourceTree = "<group>"; };
+		D0BF2F37E92F3BD644C5306D /* AddOperationSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOperationSheet.swift; sourceTree = "<group>"; };
+		E438B3915947FE0DDA2A8E2F /* OperationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationDetailView.swift; sourceTree = "<group>"; };
+		EE639E5AB5E16D74AB0AF042 /* ShopFloorDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopFloorDocument.swift; sourceTree = "<group>"; };
+		F6EC2FDCF33EE3E9A16DF5F0 /* AddMachineSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMachineSheet.swift; sourceTree = "<group>"; };
+		F7E7CDF26D9860A853F7C69B /* TimeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCalculator.swift; sourceTree = "<group>"; };
+		FE703CE8939D12795132883E /* ShopFloorPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopFloorPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		059AD730D12D230F4CA2B4AE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				975D35F678E0BB5EF02E065A /* SidebarView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		1AEA9087213595FAF8788C8C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B692608114EA3ECB1478276C /* AppCommands.swift */,
+				C4546D33311FC535120D889A /* AppStore.swift */,
+				858720A83B4C1C72A809508A /* DocumentContentView.swift */,
+				EE639E5AB5E16D74AB0AF042 /* ShopFloorDocument.swift */,
+				02C1AE19469B5B695A225938 /* ShopFloorPlannerApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		200B84BB8DE37136A7D60FF4 = {
+			isa = PBXGroup;
+			children = (
+				8065F11C89EA4BF25BC3BF23 /* Sources */,
+				F4DD0EA8BD18778ED99E1245 /* Tests */,
+				70108ADC17D2964554720240 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2444D36D7CECA6D6B37EAD07 /* ShopFloorPlanner */ = {
+			isa = PBXGroup;
+			children = (
+				1AEA9087213595FAF8788C8C /* App */,
+				9BE7C3365D2707D78245E48E /* Models */,
+				B857D285656A76139A742945 /* Services */,
+				8EA16C02640AD48560E5E6F8 /* Views */,
+			);
+			path = ShopFloorPlanner;
+			sourceTree = "<group>";
+		};
+		3E3D80939E49604E600E6ED7 /* ShopFloorPlannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				9E22320167BA0C369B589D79 /* TimeCalculatorTests.swift */,
+			);
+			path = ShopFloorPlannerTests;
+			sourceTree = "<group>";
+		};
+		70108ADC17D2964554720240 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE703CE8939D12795132883E /* ShopFloorPlanner.app */,
+				8DC2096E282F73EE1546239B /* ShopFloorPlannerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		741EC275687798600F941907 /* FloorEditor */ = {
+			isa = PBXGroup;
+			children = (
+				F6EC2FDCF33EE3E9A16DF5F0 /* AddMachineSheet.swift */,
+				C051F57621B1BC5256772ECA /* FloorCanvasView.swift */,
+				85A5FA557ADF6E9C9D1DCB87 /* FloorEditorView.swift */,
+				736E49D8567F566AF8387703 /* MachineDetailView.swift */,
+			);
+			path = FloorEditor;
+			sourceTree = "<group>";
+		};
+		8065F11C89EA4BF25BC3BF23 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2444D36D7CECA6D6B37EAD07 /* ShopFloorPlanner */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		8EA16C02640AD48560E5E6F8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				772A59D5D82D28F10C9B4BB7 /* ContentView.swift */,
+				741EC275687798600F941907 /* FloorEditor */,
+				FE5356F22C77E1300D45A736 /* PartPlanner */,
+				C892A4BCD40DFCFF6AE8828A /* Reports */,
+				059AD730D12D230F4CA2B4AE /* Shared */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9BE7C3365D2707D78245E48E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				55F4349C5E1B81DA2C527594 /* Machine.swift */,
+				64711055F007CA11F4318BD7 /* MachineTypeExtensions.swift */,
+				AD501E6615EEACC1BA8DE538 /* Operation.swift */,
+				0C2096A0415E07ACEC12B334 /* Part.swift */,
+				9A8E1FD2F383FC4112C4DA79 /* Workshop.swift */,
+				C27426474F21B5FAC476C698 /* WorkshopZone.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B857D285656A76139A742945 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E731D31BE156A2766168E784 /* RouteOptimizer */,
+				CAF0B237883AFEF572C9D54C /* TimeCalculator */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C892A4BCD40DFCFF6AE8828A /* Reports */ = {
+			isa = PBXGroup;
+			children = (
+				7DCCABAEE10BF5EF3B5058F2 /* GanttView.swift */,
+				8C791F1C08D446A7347A10BB /* ReportView.swift */,
+			);
+			path = Reports;
+			sourceTree = "<group>";
+		};
+		CAF0B237883AFEF572C9D54C /* TimeCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				596AB4DB14D3164929D3CAE6 /* CuttingParameters.swift */,
+				9FFE2BC09B163519F3FBD8F1 /* GanttBuilder.swift */,
+				F7E7CDF26D9860A853F7C69B /* TimeCalculator.swift */,
+			);
+			path = TimeCalculator;
+			sourceTree = "<group>";
+		};
+		E731D31BE156A2766168E784 /* RouteOptimizer */ = {
+			isa = PBXGroup;
+			children = (
+				5B40034652CE87CE8580EA5B /* RouteOptimizer.swift */,
+			);
+			path = RouteOptimizer;
+			sourceTree = "<group>";
+		};
+		F4DD0EA8BD18778ED99E1245 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3E3D80939E49604E600E6ED7 /* ShopFloorPlannerTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		FE5356F22C77E1300D45A736 /* PartPlanner */ = {
+			isa = PBXGroup;
+			children = (
+				D0BF2F37E92F3BD644C5306D /* AddOperationSheet.swift */,
+				96794FF752730690B2ABD555 /* AddPartSheet.swift */,
+				C84E8A8BB522EF1A9D63E315 /* CuttingParametersView.swift */,
+				E438B3915947FE0DDA2A8E2F /* OperationDetailView.swift */,
+				53D4AED0E8A894BFB0A72C9A /* OperationsEditorView.swift */,
+				A088AE48945484EB8E74275E /* PartPlannerView.swift */,
+			);
+			path = PartPlanner;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B7F2B8F4E09204AED10B22A0 /* ShopFloorPlanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BE9DF8E9AB0A74FD2C64F12 /* Build configuration list for PBXNativeTarget "ShopFloorPlanner" */;
+			buildPhases = (
+				40B595582918E3D1EA0F7375 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShopFloorPlanner;
+			packageProductDependencies = (
+			);
+			productName = ShopFloorPlanner;
+			productReference = FE703CE8939D12795132883E /* ShopFloorPlanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE28E8560A7F921F55A7E20D /* ShopFloorPlannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8C4C91A6E8F25290ED417C6 /* Build configuration list for PBXNativeTarget "ShopFloorPlannerTests" */;
+			buildPhases = (
+				2AF3C63F781C2B93D04A6E3C /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8FB51141FB73CA7E526F0A3 /* PBXTargetDependency */,
+			);
+			name = ShopFloorPlannerTests;
+			packageProductDependencies = (
+			);
+			productName = ShopFloorPlannerTests;
+			productReference = 8DC2096E282F73EE1546239B /* ShopFloorPlannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4F549172937252C2BD62AACA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					B7F2B8F4E09204AED10B22A0 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 0F634B346CE44FD0DB5C73AF /* Build configuration list for PBXProject "ShopFloorPlanner" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 200B84BB8DE37136A7D60FF4;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 70108ADC17D2964554720240 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B7F2B8F4E09204AED10B22A0 /* ShopFloorPlanner */,
+				DE28E8560A7F921F55A7E20D /* ShopFloorPlannerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2AF3C63F781C2B93D04A6E3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				594153A05DCD59C3085C6557 /* TimeCalculatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40B595582918E3D1EA0F7375 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CED0014DBA9A1B88CC9F036 /* AddMachineSheet.swift in Sources */,
+				8595B156B9328786AF476916 /* AddOperationSheet.swift in Sources */,
+				67C045393BCF5BBF9AA7AF5D /* AddPartSheet.swift in Sources */,
+				7D54B88344CC6E8F8B9FF201 /* AppCommands.swift in Sources */,
+				DD97915D774F2A69A6A3369E /* AppStore.swift in Sources */,
+				30B84B5955641C90B6688F52 /* ContentView.swift in Sources */,
+				55503F105D54DACE827C8789 /* CuttingParameters.swift in Sources */,
+				FDCB276A48AD2FEEF4D10AFE /* CuttingParametersView.swift in Sources */,
+				46E8827932DCB725129B0858 /* DocumentContentView.swift in Sources */,
+				2D3A8342AB5952683BB11AB8 /* FloorCanvasView.swift in Sources */,
+				FA8B6C29662B14BA2DFE1060 /* FloorEditorView.swift in Sources */,
+				A8A67F795C041A2AB59B5040 /* GanttBuilder.swift in Sources */,
+				EFCEA4FF5E2379442943FA08 /* GanttView.swift in Sources */,
+				EE932F7DF359114939C4E9CF /* Machine.swift in Sources */,
+				AF23ABA2D32475452A2CEC59 /* MachineDetailView.swift in Sources */,
+				4C286619A992EDEBBD6B0D53 /* MachineTypeExtensions.swift in Sources */,
+				F9089B5A724C255C875CEBE3 /* Operation.swift in Sources */,
+				6D25FD22EE4821D135B1AF8C /* OperationDetailView.swift in Sources */,
+				2CE6614232D4A4189DBEB401 /* OperationsEditorView.swift in Sources */,
+				D3117F3D75B444121853FBC5 /* Part.swift in Sources */,
+				7ED3594C27327679C1D8293E /* PartPlannerView.swift in Sources */,
+				D3D0FFD9F7B03729F44ED9C7 /* ReportView.swift in Sources */,
+				AAB72548E1BC6A8B51BD0A25 /* RouteOptimizer.swift in Sources */,
+				AFC6EBD35D0FD6FB678E8866 /* ShopFloorDocument.swift in Sources */,
+				8F76A4A9DE30F82C1F0509BB /* ShopFloorPlannerApp.swift in Sources */,
+				F2FB53925F685FD5EE7B836B /* SidebarView.swift in Sources */,
+				5C82A6E8C83585DD5CE47C56 /* TimeCalculator.swift in Sources */,
+				8749180138ABEB36BFBC700F /* Workshop.swift in Sources */,
+				69F73F98BF11267624B951AD /* WorkshopZone.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D8FB51141FB73CA7E526F0A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7F2B8F4E09204AED10B22A0 /* ShopFloorPlanner */;
+			targetProxy = 0AA1EB8B3B824EABD2FE8162 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		06A50D1D14CE4AC80B140D71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ShopFloorPlanner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lordhater.shopfloorplanner.app;
+				PRODUCT_NAME = ShopFloorPlanner;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		0B7BD2E7B0B731961C1B7872 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ShopFloorPlanner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lordhater.shopfloorplanner.app;
+				PRODUCT_NAME = ShopFloorPlanner;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		3CBCCD07AFF2ABB28FC11369 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lordhater.shopfloorplanner.tests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShopFloorPlanner.app/Contents/MacOS/ShopFloorPlanner";
+			};
+			name = Debug;
+		};
+		7D56971C30027468B48D66AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lordhater.shopfloorplanner.tests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShopFloorPlanner.app/Contents/MacOS/ShopFloorPlanner";
+			};
+			name = Release;
+		};
+		A2B863F3E51C186BAA3E3702 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		DBF21851F1EECE7DC535B5E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F634B346CE44FD0DB5C73AF /* Build configuration list for PBXProject "ShopFloorPlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2B863F3E51C186BAA3E3702 /* Debug */,
+				DBF21851F1EECE7DC535B5E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8BE9DF8E9AB0A74FD2C64F12 /* Build configuration list for PBXNativeTarget "ShopFloorPlanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06A50D1D14CE4AC80B140D71 /* Debug */,
+				0B7BD2E7B0B731961C1B7872 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C8C4C91A6E8F25290ED417C6 /* Build configuration list for PBXNativeTarget "ShopFloorPlannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CBCCD07AFF2ABB28FC11369 /* Debug */,
+				7D56971C30027468B48D66AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4F549172937252C2BD62AACA /* Project object */;
+}
