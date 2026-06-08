@@ -19,7 +19,9 @@ struct AddMachineSheet: View {
                 }
             }
             .onChange(of: selectedType) { _, new in
-                if name.isEmpty { name = new.rawValue }
+                Task { @MainActor in
+                    if name.isEmpty { name = new.rawValue }
+                }
             }
 
             TextField("Название (необязательно)", text: $name)

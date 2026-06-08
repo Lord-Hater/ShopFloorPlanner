@@ -28,9 +28,11 @@ struct AddOperationSheet: View {
                     Text(t.rawValue).tag(t)
                 }
             }
-            .onChange(of: type) { _, _ in
-                machineID = nil
-                if name.isEmpty { name = type.rawValue }
+            .onChange(of: type) { _, newType in
+                Task { @MainActor in
+                    machineID = nil
+                    if name.isEmpty { name = newType.rawValue }
+                }
             }
 
             Picker("Станок", selection: $machineID) {

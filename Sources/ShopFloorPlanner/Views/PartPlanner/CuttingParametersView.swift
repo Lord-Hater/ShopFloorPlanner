@@ -113,7 +113,7 @@ struct TurningParametersForm: View {
 
             formulaNote("T₀ = L · i / (n · S),  n = 1000·V / (π·D)")
         }
-        .onChange(of: params) { _, new in onChange(new) }
+        .onChange(of: params) { _, new in Task { @MainActor in onChange(new) } }
     }
 }
 
@@ -150,7 +150,7 @@ struct MillingParametersForm: View {
 
             formulaNote("T₀ = L / Sмин,  Sмин = Sz · z · n,  n = 1000·V / (π·D)")
         }
-        .onChange(of: params) { _, new in onChange(new) }
+        .onChange(of: params) { _, new in Task { @MainActor in onChange(new) } }
     }
 }
 
@@ -180,7 +180,7 @@ struct DrillingParametersForm: View {
 
             formulaNote("T₀ = L / (n · S),  n = 1000·V / (π·D)")
         }
-        .onChange(of: params) { _, new in onChange(new) }
+        .onChange(of: params) { _, new in Task { @MainActor in onChange(new) } }
     }
 }
 
@@ -218,7 +218,7 @@ struct GrindingParametersForm: View {
 
             formulaNote("T₀ = (l/Sос + 1) · i / n · 1.2  (коэф. выхаживания)")
         }
-        .onChange(of: params) { _, new in onChange(new) }
+        .onChange(of: params) { _, new in Task { @MainActor in onChange(new) } }
     }
 }
 

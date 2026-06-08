@@ -11,6 +11,17 @@ struct OperationDetailView: View {
         }
     }
 
+    /// Все машины для Picker: совместимые + текущая (если несовместима после смены типа)
+    private var pickerMachines: [Machine] {
+        var list = compatibleMachines
+        if let id = operation.machineID,
+           let current = store.workshop?.machine(by: id),
+           !list.contains(where: { $0.id == id }) {
+            list.insert(current, at: 0)
+        }
+        return list
+    }
+
     var body: some View {
         ScrollView {
             Form {
@@ -21,17 +32,28 @@ struct OperationDetailView: View {
                             Text(type.rawValue).tag(type)
                         }
                     }
+                    // При смене типа операции сбрасываем станок если он несовместим
+                    .onChange(of: operation.type) { _, _ in
+                        Task { @MainActor in
+                            if let id = operation.machineID,
+                               let machine = store.workshop?.machine(by: id),
+                               machine.type.compatibleOperationType != operation.type {
+                                operation.machineID = nil
+                            }
+                            operation.cuttingParameters = CuttingParametersContainer.defaultFor(operation.type)
+                        }
+                    }
                 }
 
                 Section("Станок") {
-                    if compatibleMachines.isEmpty {
+                    if pickerMachines.isEmpty {
                         Label("Нет совместимых станков на схеме", systemImage: "exclamationmark.triangle")
                             .foregroundStyle(.orange)
                             .font(.caption)
                     } else {
                         Picker("Назначить станок", selection: $operation.machineID) {
                             Text("— Не назначен —").tag(UUID?.none)
-                            ForEach(compatibleMachines) { machine in
+                            ForEach(pickerMachines) { machine in
                                 HStack {
                                     Text(machine.type.icon)
                                     Text(machine.name)
